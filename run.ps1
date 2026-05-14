@@ -1,9 +1,7 @@
-param(
-    [string]$text
-)
+$text = $env:CODE
 
 if (-not $text) {
-    Write-Host "Usage: $text='your_text'; iex ((iwr https://raw.githubusercontent.com/YOUR_USER/YOUR_REPO/main/run.ps1).Content)"
+    Write-Host "Set MY_HOOK_TEXT environment variable and run again."
     exit 1
 }
 
